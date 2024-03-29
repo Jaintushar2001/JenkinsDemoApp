@@ -14,9 +14,9 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@GetMapping("/getCustomers")
-	public List<Customer> getAllCustomers() {
-	    return customerService.getAllCustomers();
+	 @GetMapping("/getCustomers")
+	 public List<Customer> getAllCustomers() {
+		return customerService.getAllCustomers();
 	}
 
 	@PostMapping("/saveCustomer")
