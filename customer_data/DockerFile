@@ -1,9 +1,4 @@
-FROM openjdk:11-jdk-slim AS builder
-
-WORKDIR /app
-
-COPY target/my-spring-boot-app.jar /app/my-spring-boot-app.jar
-
+FROM openjdk:11
 EXPOSE 8090
-
-CMD ["java", "-jar", "customerdata.jar"]
+ADD target/customerdata.jar customerdata.jar
+ENTRYPOINT ["java","-jar","customerdata.jar"]
